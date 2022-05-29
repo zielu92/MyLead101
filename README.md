@@ -1,5 +1,6 @@
 # MyLead101
-#start 
+
+# start 
 1. copy .env.example ```cp .env.example .env```
 2. edit .env 
 ```shell
@@ -15,14 +16,14 @@ php artisan db:seed --class=ProductsSeeder
 ```shell
 php artisan serve
 ```
-##Endpoints
+## Endpoints
 PostMan collection location:
 ```PostMan_collection/MyLead101.postman_collection.json```
 
-##Other
+## Other
 Simple vue app to play around :)
 
-##Tests
+## Tests
 PASS  Tests\Feature\ProductTest
 
 ✓ get products
