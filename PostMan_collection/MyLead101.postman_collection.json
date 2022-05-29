@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "a7232a8c-f9d6-4452-903f-4be2182558e1",
+		"name": "MyLead101",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10561842"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"test@gmail.com\",\n\t\"password\": \"Test1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"name\": \"Jon Doe\",\n\t\"email\": \"test@gmail.com\",\n\t\"password\": \"Test1234\",\n\t\"password_confirmation\": \"Test1234\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRhMjI3ODA0OTEyZjNiNjZkNWQ4ZTJiODEwZWQ5ZTM1NmM1OWY4ZmI2NmZhZmI0YWIyY2Y5ZDg0MGU1NWZmYzIxODY5ZDQ1Njg1NTFiMTkiLCJpYXQiOjE2NTM3MjkyNjEuNDYwNzI0LCJuYmYiOjE2NTM3MjkyNjEuNDYwNzI4LCJleHAiOjE2ODUyNjUyNjEuNDU0NTM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.avYExBMC0kTBBcNU6UWMZjNJFDaroMsLd0W3d_BCLtIFhuMcQ1XuOKp0y8wggQlOpuF3QBekMAatv_Iz4d2dxK-nVhdHknEZSe_qMxPE9o2f9FliSarj-WExJZN91ujt9wMNAVZj6d8zx8i1Tb3UerYUPuvKU2yb7geYLkvFZVjRQfmm2In467QM4nPE6YJWWuIxFpfjhnnRa8i15LCE6FptI8XKhTHiAxpDsW1PCcuNLxyqcXuD0FIrG26gAewmvHYMR1VeJfNaFOEpMpoN_RWIeyifWmX_KbxfNJnCTfxJ8X9TntrnXjroxH2Y0io6GdO7rFiBNzExmichS2BiAmCEEdHVhGWQJFVRWXnq4wLCs6TpP6c0PxNtFNFGrSN0ENW16100QqEqVRHVpGjdWvGBDnrcWMzwZY9Zlbuz6FzxjNv9iSlyTl1LPcp44pt8Tq5mnmf4M5A5GtwX7Ua7NHJgLYzic6ykvgL-9UzReDyf-uTSuPGr62ISjImvK7kmx7vMW8czuK3InJyE9uYUj8Zg6IWViI8bxJd7TOLvbRbaqN7IK2xvxqOtROjnkMhdq08JpHFe2pOAS60-AFE8nf6cuQ0FP_OJX0Bkb8evmZBDrny-3HV5V9bZbnmIY1gtBnYgymnLAkOyvgzLACJS3657ZKTsC91Gm82420B-BVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test\",\n    \"description\": \"lorem ipsum sth\",\n    \"sku\": \"1235\",\n    \"price\":[\n            {\n                \"name\":\"Red color\",\"price\":\"5\"\n            },\n            {\n                \"name\":\"Small\",\"price\":\"44.23\"\n            },\n            {\n                \"name\":\"XXL\",\"price\":\"423.99\"\n            }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRhMjI3ODA0OTEyZjNiNjZkNWQ4ZTJiODEwZWQ5ZTM1NmM1OWY4ZmI2NmZhZmI0YWIyY2Y5ZDg0MGU1NWZmYzIxODY5ZDQ1Njg1NTFiMTkiLCJpYXQiOjE2NTM3MjkyNjEuNDYwNzI0LCJuYmYiOjE2NTM3MjkyNjEuNDYwNzI4LCJleHAiOjE2ODUyNjUyNjEuNDU0NTM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.avYExBMC0kTBBcNU6UWMZjNJFDaroMsLd0W3d_BCLtIFhuMcQ1XuOKp0y8wggQlOpuF3QBekMAatv_Iz4d2dxK-nVhdHknEZSe_qMxPE9o2f9FliSarj-WExJZN91ujt9wMNAVZj6d8zx8i1Tb3UerYUPuvKU2yb7geYLkvFZVjRQfmm2In467QM4nPE6YJWWuIxFpfjhnnRa8i15LCE6FptI8XKhTHiAxpDsW1PCcuNLxyqcXuD0FIrG26gAewmvHYMR1VeJfNaFOEpMpoN_RWIeyifWmX_KbxfNJnCTfxJ8X9TntrnXjroxH2Y0io6GdO7rFiBNzExmichS2BiAmCEEdHVhGWQJFVRWXnq4wLCs6TpP6c0PxNtFNFGrSN0ENW16100QqEqVRHVpGjdWvGBDnrcWMzwZY9Zlbuz6FzxjNv9iSlyTl1LPcp44pt8Tq5mnmf4M5A5GtwX7Ua7NHJgLYzic6ykvgL-9UzReDyf-uTSuPGr62ISjImvK7kmx7vMW8czuK3InJyE9uYUj8Zg6IWViI8bxJd7TOLvbRbaqN7IK2xvxqOtROjnkMhdq08JpHFe2pOAS60-AFE8nf6cuQ0FP_OJX0Bkb8evmZBDrny-3HV5V9bZbnmIY1gtBnYgymnLAkOyvgzLACJS3657ZKTsC91Gm82420B-BVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"name\": \"Qui ratione qui.\",\n    \"description\": \"Asperiores odit dicta quas aut natus pariatur consequatur quis laborum perferendis eligendi sed laboriosam adipisci laboriosam perferendis nihil dolorem.\",\n    \"sku\": \"585272209\",\n    \"user_id\": 1,\n    \"created_at\": \"2022-05-28T12:51:35.000000Z\",\n    \"updated_at\": \"2022-05-28T12:51:35.000000Z\",\n    \"price\": [\n        {\n            \"id\": 6,\n            \"products_id\": 3,\n            \"name\": \"Saepe sequi iste.\",\n            \"price\": \"5415.00\",\n            \"created_at\": \"2022-05-28T12:51:35.000000Z\",\n            \"updated_at\": \"2022-05-28T12:51:35.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"products_id\": 3,\n            \"name\": \"Totam sed officiis eos vel.\",\n            \"price\": \"3875.00\",\n            \"created_at\": \"2022-05-28T12:51:35.000000Z\",\n            \"updated_at\": \"2022-05-28T12:51:35.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"products_id\": 3,\n            \"name\": \"Eveniet porro est libero.\",\n            \"price\": \"1232.00\",\n            \"created_at\": \"2022-05-28T12:51:35.000000Z\",\n            \"updated_at\": \"2022-05-28T12:51:35.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"products_id\": 3,\n            \"name\": \"Voluptatibus voluptate corporis magnam.\",\n            \"price\": \"1463.00\",\n            \"created_at\": \"2022-05-28T12:51:35.000000Z\",\n            \"updated_at\": \"2022-05-28T12:51:35.000000Z\"\n        },\n        {\n            \"name\": \"XLL\",\n            \"price\": \"23.99\",\n            \"products_id\": 3\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRhMjI3ODA0OTEyZjNiNjZkNWQ4ZTJiODEwZWQ5ZTM1NmM1OWY4ZmI2NmZhZmI0YWIyY2Y5ZDg0MGU1NWZmYzIxODY5ZDQ1Njg1NTFiMTkiLCJpYXQiOjE2NTM3MjkyNjEuNDYwNzI0LCJuYmYiOjE2NTM3MjkyNjEuNDYwNzI4LCJleHAiOjE2ODUyNjUyNjEuNDU0NTM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.avYExBMC0kTBBcNU6UWMZjNJFDaroMsLd0W3d_BCLtIFhuMcQ1XuOKp0y8wggQlOpuF3QBekMAatv_Iz4d2dxK-nVhdHknEZSe_qMxPE9o2f9FliSarj-WExJZN91ujt9wMNAVZj6d8zx8i1Tb3UerYUPuvKU2yb7geYLkvFZVjRQfmm2In467QM4nPE6YJWWuIxFpfjhnnRa8i15LCE6FptI8XKhTHiAxpDsW1PCcuNLxyqcXuD0FIrG26gAewmvHYMR1VeJfNaFOEpMpoN_RWIeyifWmX_KbxfNJnCTfxJ8X9TntrnXjroxH2Y0io6GdO7rFiBNzExmichS2BiAmCEEdHVhGWQJFVRWXnq4wLCs6TpP6c0PxNtFNFGrSN0ENW16100QqEqVRHVpGjdWvGBDnrcWMzwZY9Zlbuz6FzxjNv9iSlyTl1LPcp44pt8Tq5mnmf4M5A5GtwX7Ua7NHJgLYzic6ykvgL-9UzReDyf-uTSuPGr62ISjImvK7kmx7vMW8czuK3InJyE9uYUj8Zg6IWViI8bxJd7TOLvbRbaqN7IK2xvxqOtROjnkMhdq08JpHFe2pOAS60-AFE8nf6cuQ0FP_OJX0Bkb8evmZBDrny-3HV5V9bZbnmIY1gtBnYgymnLAkOyvgzLACJS3657ZKTsC91Gm82420B-BVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add price",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRhMjI3ODA0OTEyZjNiNjZkNWQ4ZTJiODEwZWQ5ZTM1NmM1OWY4ZmI2NmZhZmI0YWIyY2Y5ZDg0MGU1NWZmYzIxODY5ZDQ1Njg1NTFiMTkiLCJpYXQiOjE2NTM3MjkyNjEuNDYwNzI0LCJuYmYiOjE2NTM3MjkyNjEuNDYwNzI4LCJleHAiOjE2ODUyNjUyNjEuNDU0NTM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.avYExBMC0kTBBcNU6UWMZjNJFDaroMsLd0W3d_BCLtIFhuMcQ1XuOKp0y8wggQlOpuF3QBekMAatv_Iz4d2dxK-nVhdHknEZSe_qMxPE9o2f9FliSarj-WExJZN91ujt9wMNAVZj6d8zx8i1Tb3UerYUPuvKU2yb7geYLkvFZVjRQfmm2In467QM4nPE6YJWWuIxFpfjhnnRa8i15LCE6FptI8XKhTHiAxpDsW1PCcuNLxyqcXuD0FIrG26gAewmvHYMR1VeJfNaFOEpMpoN_RWIeyifWmX_KbxfNJnCTfxJ8X9TntrnXjroxH2Y0io6GdO7rFiBNzExmichS2BiAmCEEdHVhGWQJFVRWXnq4wLCs6TpP6c0PxNtFNFGrSN0ENW16100QqEqVRHVpGjdWvGBDnrcWMzwZY9Zlbuz6FzxjNv9iSlyTl1LPcp44pt8Tq5mnmf4M5A5GtwX7Ua7NHJgLYzic6ykvgL-9UzReDyf-uTSuPGr62ISjImvK7kmx7vMW8czuK3InJyE9uYUj8Zg6IWViI8bxJd7TOLvbRbaqN7IK2xvxqOtROjnkMhdq08JpHFe2pOAS60-AFE8nf6cuQ0FP_OJX0Bkb8evmZBDrny-3HV5V9bZbnmIY1gtBnYgymnLAkOyvgzLACJS3657ZKTsC91Gm82420B-BVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Test\",\n    \"price\":\"1234.67\",\n    \"products_id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update price",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRhMjI3ODA0OTEyZjNiNjZkNWQ4ZTJiODEwZWQ5ZTM1NmM1OWY4ZmI2NmZhZmI0YWIyY2Y5ZDg0MGU1NWZmYzIxODY5ZDQ1Njg1NTFiMTkiLCJpYXQiOjE2NTM3MjkyNjEuNDYwNzI0LCJuYmYiOjE2NTM3MjkyNjEuNDYwNzI4LCJleHAiOjE2ODUyNjUyNjEuNDU0NTM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.avYExBMC0kTBBcNU6UWMZjNJFDaroMsLd0W3d_BCLtIFhuMcQ1XuOKp0y8wggQlOpuF3QBekMAatv_Iz4d2dxK-nVhdHknEZSe_qMxPE9o2f9FliSarj-WExJZN91ujt9wMNAVZj6d8zx8i1Tb3UerYUPuvKU2yb7geYLkvFZVjRQfmm2In467QM4nPE6YJWWuIxFpfjhnnRa8i15LCE6FptI8XKhTHiAxpDsW1PCcuNLxyqcXuD0FIrG26gAewmvHYMR1VeJfNaFOEpMpoN_RWIeyifWmX_KbxfNJnCTfxJ8X9TntrnXjroxH2Y0io6GdO7rFiBNzExmichS2BiAmCEEdHVhGWQJFVRWXnq4wLCs6TpP6c0PxNtFNFGrSN0ENW16100QqEqVRHVpGjdWvGBDnrcWMzwZY9Zlbuz6FzxjNv9iSlyTl1LPcp44pt8Tq5mnmf4M5A5GtwX7Ua7NHJgLYzic6ykvgL-9UzReDyf-uTSuPGr62ISjImvK7kmx7vMW8czuK3InJyE9uYUj8Zg6IWViI8bxJd7TOLvbRbaqN7IK2xvxqOtROjnkMhdq08JpHFe2pOAS60-AFE8nf6cuQ0FP_OJX0Bkb8evmZBDrny-3HV5V9bZbnmIY1gtBnYgymnLAkOyvgzLACJS3657ZKTsC91Gm82420B-BVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 20,\n    \"products_id\": 5,\n    \"name\": \"Nulla unde aliquid iusto.\",\n    \"price\": \"4779.99\",\n    \"created_at\": \"2022-05-28T12:51:35.000000Z\",\n    \"updated_at\": \"2022-05-28T12:51:35.000000Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove price",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDRhMjI3ODA0OTEyZjNiNjZkNWQ4ZTJiODEwZWQ5ZTM1NmM1OWY4ZmI2NmZhZmI0YWIyY2Y5ZDg0MGU1NWZmYzIxODY5ZDQ1Njg1NTFiMTkiLCJpYXQiOjE2NTM3MjkyNjEuNDYwNzI0LCJuYmYiOjE2NTM3MjkyNjEuNDYwNzI4LCJleHAiOjE2ODUyNjUyNjEuNDU0NTM3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.avYExBMC0kTBBcNU6UWMZjNJFDaroMsLd0W3d_BCLtIFhuMcQ1XuOKp0y8wggQlOpuF3QBekMAatv_Iz4d2dxK-nVhdHknEZSe_qMxPE9o2f9FliSarj-WExJZN91ujt9wMNAVZj6d8zx8i1Tb3UerYUPuvKU2yb7geYLkvFZVjRQfmm2In467QM4nPE6YJWWuIxFpfjhnnRa8i15LCE6FptI8XKhTHiAxpDsW1PCcuNLxyqcXuD0FIrG26gAewmvHYMR1VeJfNaFOEpMpoN_RWIeyifWmX_KbxfNJnCTfxJ8X9TntrnXjroxH2Y0io6GdO7rFiBNzExmichS2BiAmCEEdHVhGWQJFVRWXnq4wLCs6TpP6c0PxNtFNFGrSN0ENW16100QqEqVRHVpGjdWvGBDnrcWMzwZY9Zlbuz6FzxjNv9iSlyTl1LPcp44pt8Tq5mnmf4M5A5GtwX7Ua7NHJgLYzic6ykvgL-9UzReDyf-uTSuPGr62ISjImvK7kmx7vMW8czuK3InJyE9uYUj8Zg6IWViI8bxJd7TOLvbRbaqN7IK2xvxqOtROjnkMhdq08JpHFe2pOAS60-AFE8nf6cuQ0FP_OJX0Bkb8evmZBDrny-3HV5V9bZbnmIY1gtBnYgymnLAkOyvgzLACJS3657ZKTsC91Gm82420B-BVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product?sortBy=name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtering products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product?name=a&user_id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "a"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sorting prices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price?sortBy=name",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtering prices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price?name=a&products_id=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "a"
+						},
+						{
+							"key": "products_id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
